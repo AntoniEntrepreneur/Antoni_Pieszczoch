@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Antoniego :D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffebee;
+            color: #333;
+        }
+
+        header {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #c62828;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .navbar a:hover {
+            background-color: #e53935;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-title {
+            font-size: 2em;
+            color: #d32f2f;
+        }
+
+        .tab-description {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .link {
+            color: #e53935;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            position: relative;
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-height: 500px;
+            border-radius: 8px;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 2em;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            z-index: 10;
+        }
+
+        .arrow-left {
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        .arrow-right {
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #d32f2f;
+            color: white;
+        }
+
+        /* Animation for tab content */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Newsletter Popup Styles */
+        #newsletterPopup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .newsletter-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .newsletter-form button {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #c62828;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Strona Antoniego :D</h1>
+    </header>
+
+    <div class="navbar">
+        <a href="javascript:void(0);" onclick="showTab('about')">O mnie</a>
+        <a href="javascript:void(0);" onclick="showTab('instagram')">Instagram</a>
+        <a href="javascript:void(0);" onclick="showTab('gallery')">Galeria zdjęć</a>
+    </div>
+
+    <div class="content">
+        <div id="about" class="tab-content active">
+            <h2 class="tab-title">O mnie</h2>
+            <p class="tab-description">
+                Cześć! Nazywam się Antoni, jestem filantropem, multimilionerem i przedsiębiorcą, który odnosi sukcesy na całym świecie. Moja pasja to nie tylko inwestowanie i rozwój moich firm, ale także pomoc innym w osiąganiu ich celów. Posiadam kilka luksusowych jachtów, podróżuję po całym świecie i czerpię z życia pełnymi garściami.
+            </p>
+            <p class="tab-description">
+                Jako playboy, prowadzę życie, o jakim marzą miliony ludzi. Jestem w stanie spełnić każde swoje marzenie – od organizowania ekskluzywnych imprez po podróże do najpiękniejszych miejsc na ziemi. Moje życie to pasmo sukcesów, które zdobyłem dzięki ciężkiej pracy, mądrym decyzjom inwestycyjnym i nieustannemu dążeniu do perfekcji. Moje jachty to nie tylko symbole bogactwa, ale także przestrzenie do odpoczynku i refleksji nad moimi celami.
+            </p>
+            <p class="tab-description">
+                Chociaż moje życie zawodowe jest pełne wyzwań, nie zapominam o najważniejszych wartościach, jakimi są rodzina, przyjaźń i chęć niesienia pomocy innym. Działam na rzecz filantropii, inwestując w projekty, które mają na celu poprawę jakości życia innych. Moje sukcesy materialne traktuję jako narzędzie, które daje mi możliwość realizacji moich idei na większą skalę.
+            </p>
+        </div>
+
+        <div id="instagram" class="tab-content">
+            <h2 class="tab-title">Instagram</h2>
+            <p><a href="https://www.instagram.com/antonipieszczhoch/" class="link" target="_blank">Kliknij tutaj, aby odwiedzić mój profil na Instagramie!</a></p>
+        </div>
+
+        <div id="gallery" class="tab-content">
+            <h2 class="tab-title">Galeria zdjęć</h2>
+            <div class="gallery">
+                <img src="obrazy/barirlandzki.jpg" alt="Zdjęcie 1" id="currentImage">
+                <button class="arrow arrow-left" onclick="changeImage('left')">←</button>
+                <button class="arrow arrow-right" onclick="changeImage('right')">→</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Antoni Pieszczoch. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <div id="newsletterPopup">
+        <div class="newsletter-form">
+            <h2>Subskrybuj newsletter</h2>
+            <input type="email" id="email" placeholder="Wprowadź swój e-mail" required>
+            <button onclick="submitEmail()">Zapisz się</button>
+        </div>
+    </div>
+
+    <script>
+        let images = [
+            "obrazy/barirlandzki.jpeg",
+            "obrazy/czerwonabluza.jpeg",
+            "obrazy/fajnaczapa.jpeg",
+            "obrazy/stretching.jpeg"
+        ];
+        let currentImageIndex = 0;
+
+        // Funkcja do wyświetlania zakładek
+        function showTab(tab) {
+            let tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tab).classList.add('active');
+        }
+
+        // Funkcja do zmiany zdjęcia w galerii
+        function changeImage(direction) {
+            if (direction === 'left') {
+                currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+            } else if (direction === 'right') {
+                currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+            }
+            document.getElementById('currentImage').src = images[currentImageIndex];
+        }
+
+        // Funkcja do zapisania się na newsletter
+        function submitEmail() {
+            let email = document.getElementById('email').value;
+            if (email) {
+                alert(`Dziękujemy za zapisanie się do newslettera! Twój e-mail: ${email}`);
+                document.getElementById('newsletterPopup').style.display = 'none';
+            } else {
+                alert('Proszę wprowadzić poprawny adres e-mail.');
+            }
+        }
+
+        // Otwórz popup z newsletterem po 5 sekundach
+        setTimeout(() => {
+            document.getElementById('newsletterPopup').style.display = 'flex';
+        }, 5000);
+    </script>
+</body>
+</html>
